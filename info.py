@@ -2,6 +2,6 @@ API_ID       = 24721627
 API_HASH     = "c694f1d5dd08efe1235fa13de4a5d6f1"
 BOT_TOKEN    = "6893001492:AAEX35JS2wBvchar9piCs5zWGIn85bgkr50"
 SESSION      = "BQF5ONsAZ3gfTovV-QRn0lXjIwNb8zVU-0E0t0LuUB-Ebc2uUEwXqzrcv9iljF7XStTdn7tfkfwtYrVD5T61bLvRI_QEbQmd2ztsxwD-eMvmSYLhYpTWe-IKtXVHRi9m59wQ6N9vDMavS2KHr-EI_Zu97Dbio9I7LmbNzLL4OG39i-hOezyo7MFCgcVvlLHz0EwEJrtTEvMiFvXBxP5MC248B95fP5oZwc-QbjlxypUwbjq4zINUXo9ichXEJrQHxPC1RD-qrDW_AHNkr9ezJZK7FxEhWjLeYfXQUwVFVDZjxGq2fsmqkyaK_024WAUBL8GJFNKSaJDjzgbsZh4AWzQgOEOohwAAAAFkIi2vAA"
-DATABASE_URI = "mongodb+srv://mangodb:mangodb@cluster0.dskkdky.mongodb.net/?retryWrites=true&w=majority"
+DATABASE_URI = "mongodb+srv://jnanesh:jnanesh@cluster0.8pzxa6s.mongodb.net/?retryWrites=true&w=majority"
 LOG_CHANNEL  = -1001748327089
 ADMIN        = 6605647659
