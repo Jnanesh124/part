@@ -34,10 +34,10 @@ async def search(bot, message):
           msg = await message.reply("<b>𝐌𝐫 #𝐦𝐞𝐧𝐭𝐢𝐨𝐧 𝐔𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞 👀 𝐎𝐧𝐥𝐢𝐧𝐞 𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐋𝐢𝐧𝐤 𝐍𝐨𝐭 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐫𝐞𝐢𝐠𝐡𝐭 𝐤𝐧𝐨𝐰🥺\n\n𝐆𝐞𝐭 𝐃𝐢𝐫𝐞𝐜𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞📁 𝐈𝐧 𝐁𝐞𝐥𝐨𝐰 𝐆𝐫𝐨𝐮𝐩</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔎Ur Movie File Here 🔍", url=f"https://t.me/+oQT1f1iF4fU4ZGVl")]]))
        else:
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
-       _time = (int(time()) + (15*30))
+       _time = (int(time()) + (15*60))
        await save_dlt_message(msg, _time)
     except:
-       await msg.delete(70)
+       await msg.delete()
        
 
 
