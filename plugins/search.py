@@ -37,7 +37,7 @@ async def search(bot, message):
        _time = (int(time()) + (15*30))
        await save_dlt_message(msg, _time)
     except:
-       await msg.delete(50)
+       await msg.delete(70)
        
 
 
@@ -47,7 +47,7 @@ async def recheck(bot, update):
     try:      
        typed = update.message.reply_to_message.from_user.id
     except:
-       return await update.message.delete(2)       
+       return await update.message.delete(50)       
     if clicked != typed:
        return await update.answer("That's not for you! 👀", show_alert=True)
 
