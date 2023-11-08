@@ -6,6 +6,7 @@ from client import User
 from pyrogram import Client, filters 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
 
+
 @Client.on_message(filters.text & filters.group & filters.incoming & ~filters.command(["verify", "connect", "id"]))
 async def search(bot, message):
     f_sub = await force_sub(bot, message)
@@ -37,6 +38,7 @@ async def search(bot, message):
        _time = (int(time()) + (15*60))
        await save_dlt_message(msg, _time)
     except:
+       await asyncio.sleep(30)                                            
        await msg.delete()
        
 
