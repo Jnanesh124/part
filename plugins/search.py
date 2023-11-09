@@ -26,16 +26,17 @@ async def search(bot, message):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b>👉 {name}\n🔎 {msg.link}</b>\n\n"                                                      
+               results += f"<b>🍿 {name}\n💥👉 {msg.link}</b>\n\n"                                                      
        if bool(results)==False:
           movies = await search_imdb(query)
           buttons = []
           for movie in movies: 
               buttons.append([InlineKeyboardButton(movie['title'], callback_data=f"recheck_{movie['id']}")])
-          msg = await message.reply("<b>𝐌𝐫 #𝐦𝐞𝐧𝐭𝐢𝐨𝐧 𝐔𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞 👀 𝐎𝐧𝐥𝐢𝐧𝐞 𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐋𝐢𝐧𝐤 𝐍𝐨𝐭 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐫𝐞𝐢𝐠𝐡𝐭 𝐤𝐧𝐨𝐰🥺\n\n𝐆𝐞𝐭 𝐃𝐢𝐫𝐞𝐜𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞📁 𝐈𝐧 𝐁𝐞𝐥𝐨𝐰 𝐆𝐫𝐨𝐮𝐩</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔎Ur Movie File Here 🔍", url=f"https://t.me/+oQT1f1iF4fU4ZGVl")]]))
+          msg = await message.reply(<b>𝐔 𝐭𝐲𝐩𝐞𝐝 𝐖𝐫𝐨𝐧𝐠 ❌ 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠\n\n𝐒𝐞𝐥𝐞𝐜𝐭 𝐁𝐞𝐥𝐨𝐰 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐌𝐨𝐯𝐢𝐞 𝐍𝐚𝐦𝐞</b>", 
+                                          reply_markup=InlineKeyboardMarkup(buttons))
        else:
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
-       _time = (int(time()) + (15*60))
+       _time = (int(time()) + (15*30))
        await save_dlt_message(msg, _time)
     except:
        await asyncio.sleep(30)                                            
@@ -49,15 +50,15 @@ async def recheck(bot, update):
     try:      
        typed = update.message.reply_to_message.from_user.id
     except:
-       return await update.message.delete(50)       
+       return await update.message.delete(10)       
     if clicked != typed:
-       return await update.answer("That's not for you! 👀", show_alert=True)
+       return await update.answer("That's not for you 🤨", show_alert=True)
 
-    m=await update.message.edit("Searching..💥")
+    m=await update.message.edit("𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 𝐔𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞 𝐖𝐚𝐢𝐭 🔎")
     id      = update.data.split("_")[-1]
     query   = await search_imdb(id)
     channels = (await get_group(update.message.chat.id))["channels"]
-    head    = "<u>I Have Searched Movie With Wrong Spelling But Take care next time 👇\n\nPowered By </u> <b><I>@CyniteBackup</I></b>\n\n"
+    head    = "<b>👇 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐓𝐡𝐞 𝐌𝐨𝐯𝐢𝐞 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐑𝐞𝐢𝐠𝐡𝐭 𝐊𝐧𝐨𝐰 👇</b>\n\n"
     results = ""
     try:
        for channel in channels:
@@ -65,9 +66,9 @@ async def recheck(bot, update):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b>🔎 {name}</b>\n👉 {msg.link}</b>\n\n"
+               results += f"<b>🍿 {name}</b>\n💥👉 {msg.link}</b>\n\n"
        if bool(results)==False:          
-          return await update.message.edit("Still no results found! Please Request To Group Admin", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎯 Request To Admin 🎯", callback_data=f"request_{id}")]]))
+          return await update.message.edit("<b>𝐍𝐨 𝐎𝐧𝐥𝐢𝐧𝐞 #𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐋𝐢𝐧𝐤 𝐅𝐨𝐮𝐧𝐝 𝐑𝐞𝐢𝐠𝐡𝐭 𝐊𝐧𝐨𝐰 🥺 𝐒𝐨 𝐆𝐞𝐭 𝐃𝐢𝐫𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 📁 𝐀𝐬𝐤 𝐓𝐡𝐢𝐬 𝐌𝐨𝐯𝐢𝐞 𝐀𝐠𝐚𝐢𝐧 𝐢𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐨𝐭 𝐔 𝐆𝐞𝐭 𝐔𝐫 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞</b>\n\n<b>ನೀನು ಕೇಳಿದ ಸಿನಿಮಾ 𝐎𝐧𝐥𝐢𝐧𝐞 #𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐋𝐢𝐧𝐤 ಲಭ್ಯ ಇಲ್ಲ ಇಗಿನ ಸಮಯ ದಲ್ಲಿ ಅದಕ್ಕೆ ನೆರ  𝐅𝐢𝐥𝐞 𝐁𝐞𝐥𝐨𝐰 𝐁𝐨𝐭 ಅಲ್ಲಿ ಮತ್ತೆ 𝐭𝐲𝐩𝐞 ಮಾಡಿ 𝐅𝐢𝐥𝐞 ಬರುತ್ತದೆ</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📁 Get Direct Movie File Here 📁", url=f"t.me/Rockers_ott_movie_link_bot")]]))
        await update.message.edit(text=head+results, disable_web_page_preview=True)
     except Exception as e:
        await update.message.edit(f"❌ Error: `{e}`")
@@ -81,7 +82,7 @@ async def request(bot, update):
     except:
        return await update.message.delete()       
     if clicked != typed:
-       return await update.answer("That's not for you! 👀", show_alert=True)
+       return await update.answer("That's not for you 🤨", show_alert=True)
 
     admin = (await get_group(update.message.chat.id))["user_id"]
     id    = update.data.split("_")[1]
@@ -90,4 +91,4 @@ async def request(bot, update):
     text  = f"#RequestFromYourGroup\n\nName: {name}\nIMDb: {url}"
     await bot.send_message(chat_id=admin, text=text, disable_web_page_preview=True)
     await update.answer("✅ Request Sent To Admin", show_alert=True)
-    await update.message.delete(60)
+    await update.message.delete(40)
