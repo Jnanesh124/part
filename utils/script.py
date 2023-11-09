@@ -1,22 +1,30 @@
 class script(object):
     START = """**Hello {} ♟**
    
-I am **Find Post Bot**.I am best Channel Link Search Bot! 
-I Will filter your channel posts automatically and send it in your group chat when Someone search it.
-🛸Creating By @alonekingjnanesh"""
+𝐈 𝐀𝐦 𝐚𝐮𝐭𝐨 𝐋𝐢𝐧𝐤 𝐒𝐞𝐚𝐫𝐜𝐡 𝐁𝐨𝐭 𝐅𝐫𝐨𝐦 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐭𝐨 𝐆𝐫𝐨𝐮𝐩 👥
 
-    HELP = """To Use me In A Group
+𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐈 𝐡𝐚𝐯𝐞 👇
+👉 𝐀𝐮𝐭𝐨 𝐝𝐞𝐥𝐞𝐭𝐞 𝐭𝐨 𝐚𝐯𝐨𝐢𝐝 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 ✅ 
+👉 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐂𝐡𝐞𝐜𝐤 𝐓𝐨 𝐡𝐞𝐥𝐩 𝐭𝐨 𝐠𝐞𝐭 𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐌𝐨𝐯𝐢𝐞 ✅
+👉 𝐯𝐞𝐫𝐲 𝐒𝐩𝐞𝐞𝐝 ✅
 
-- Add me in your group & channel with all permissions. 
-- Send /verify in group & wait for It To Accept Or Directly Contact To Owner After Request @alonekingjnanesh.
-- After verification send /connect YourChannelID
-- Example : /connect -100xxxxxxxxxx
-- Done ✅. <b><I>Enjoy </I></b> )
+ 𝐈 𝐚𝐦 𝐓𝐨𝐭𝐚𝐥𝐥𝐲 𝐅𝐫𝐞𝐞 𝐍𝐨 𝐍𝐞𝐞𝐝 𝐓𝐨 𝐏𝐚𝐲✌"""
 
-Remove a Channel with - /disconnect-100xxxxxxxxxxx
-this will help you to remove a indexed channel from your group.
+    HELP = """🫂 How To Connect And Use 🫂
 
-Get connected channels list with - /connections"""
+<b>🚀Step 1
+👉Just Add me in ur group and Channel as admin 
+
+🚀Step 2
+👉Send  /verify  command In Group 
+
+🚀Step 3
+👉After I will accept within 24hours are message me @alonekingjnanesh 
+
+🚀Step 4
+👉After verify add unlimited Channel  /connect -1004658687
+
+🫂 U still Not Understand Message Me @alonekingjnanesh</b>"""
 
     ABOUT = """Powered By @ROCKERSBACKUP 
 
